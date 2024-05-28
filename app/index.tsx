@@ -20,7 +20,10 @@ const Inicio = () => {
 
   return (
     <CenterContainer>
-      <View style={styles.background}>
+      <ImageBackground source={require("@/public/coffee-wallpaper.jpeg")} style={styles.background}>
+        <View style={styles.bgOverlay}>
+
+        </View>
         <View style={styles.overflow}>
           <Image
             source={require("@/public/coffee-logo.png")}
@@ -45,7 +48,7 @@ const Inicio = () => {
             </Text>
           </TouchableHighlight>
         </View>
-      </View>
+      </ImageBackground>
     </CenterContainer>
   );
 };
@@ -64,10 +67,14 @@ const styles = StyleSheet.create({
   background: {
     width: "100%",
     height: "100%",
-    backgroundColor: "#462402",
+  },
+  bgOverlay: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#222222c4",
   },
   overflow: {
-    backgroundColor: "#291700",
+    backgroundColor: "#301a08",
     position: "absolute",
     top: 0,
     alignSelf: "center",
@@ -88,7 +95,7 @@ const styles = StyleSheet.create({
     margin: "auto",
     width: 200,
     height: 60,
-    backgroundColor: "#83511E",
+    backgroundColor: "#6f3f14",
     borderRadius: 15,
   },
   content: {
@@ -101,6 +108,6 @@ const styles = StyleSheet.create({
   text: {
     color: "#fff",
     fontSize: 20,
-    fontFamily: "NunitoBold",
+    fontFamily: "Nunito",
   },
 });
